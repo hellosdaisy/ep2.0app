@@ -2,12 +2,11 @@ import streamlit as st
 import joblib
 import numpy as np
 import pandas as pd
-import shap
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
 
 # 加载模型和标准化器
-model = joblib.load('ann_model.h5')
+model = load_model('ann_model.h5')
 scaler = joblib.load('scaler.pkl') 
 
 # 定义特征选项和名称(保持不变)
